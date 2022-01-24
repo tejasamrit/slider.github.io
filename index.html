@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(245, 191, 120);
+
+        }
+        .images img{
+            width: 100%;
+            height: 100%;
+            transition:all 0.15s ease;
+            margin-top:40px;
+        }
+        .images input{
+            display: none;
+        }
+        .dots{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(234, 241, 241);
+            /* color: aquamarine; */
+            margin: 5px;
+        }
+        .dots label{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: solid rgb(243, 6, 6) 3px;
+            cursor:pointer;
+            transition: all 0.15s ease;
+            margin: 5px;
+        }
+        .dots label:hover{
+            background-color: rgb(239, 243, 11);
+        }
+
+        #img1:checked ~ .m1{
+            margin-left: 0;
+        }
+        #img2:checked ~ .m2{
+            margin-left: -100%;
+        }
+        #img3:checked ~ .m3{
+            margin-left: -200%;
+        }
+
+
+        .slider{
+            position: relative;
+            width: 70%;
+            overflow:hidden;
+        }
+        .images{
+            display: flex;
+            width: 100%;
+            height: 600px;
+        }
+        /* .images .m2{
+            width: 100%;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="images">
+            <input type="radio" name="slide" id="img1" checked>
+            <input type="radio" name="slide" id="img2">
+            <input type="radio" name="slide" id="img3">
+            <img src="bugatti.jpg" alt="" class="m1">
+            <img src="jeep.jpg" alt="" class="m2">
+            <img src="lambo.jpg" alt="" class="m3">
+        </div>
+        <div class="dots">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+        </div>
+    </div>
+</body>
+</html>
